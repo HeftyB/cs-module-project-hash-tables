@@ -1,5 +1,22 @@
 def no_dups(s):
     # Your code here
+    split = s.split(" ")
+    # print(split)
+    set1 = set(list(split))
+    # print("set")
+    # print(set1)
+
+    new_string = ""
+    for i in split:
+        if i in set1:
+            if len(new_string) == 0:
+                new_string = i
+                set1.remove(i)
+            else:
+                new_string = new_string + " " + i
+                set1.remove(i)
+
+    return new_string
 
 
 
